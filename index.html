@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#12182f" />
+  <title>Roleta do Bingo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Righteous&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">✦</span><span>Roleta do <strong>Bingo</strong></span></div>
+      <div class="remaining" aria-live="polite"><span class="status-dot"></span><span id="remainingText">90 números restantes</span></div>
+    </header>
+
+    <section class="hero">
+      <div class="intro">
+        <p class="eyebrow">SORTEIO INTERATIVO</p>
+        <h1>Boa sorte,<br /><span>vamos sortear!</span></h1>
+        <p class="subtitle">Clique em iniciar e deixe a diversão começar.</p>
+      </div>
+      <div class="ball-stage" aria-label="Bola do último número sorteado">
+        <div class="ball-shadow"></div>
+        <div class="bingo-ball" id="bingoBall"><span id="ballNumber">--</span></div>
+        <span class="spark spark-one">✦</span><span class="spark spark-two">✧</span>
+      </div>
+    </section>
+
+    <section class="controls" aria-label="Controles do sorteio">
+      <button class="button button-primary" id="startButton"><span class="play-icon">▶</span> Sortear número</button>
+      <button class="button button-secondary" id="resetButton"><span>↻</span> Recomeçar</button>
+      <label class="voice-toggle"><input type="checkbox" id="voiceToggle" checked /><span class="toggle"></span><span>Locutor</span></label>
+    </section>
+
+    <section class="board-card">
+      <div class="board-header"><div><p class="section-label">NÚMEROS SORTEADOS</p><p class="board-caption" id="boardCaption">Nenhum número sorteado ainda</p></div><div class="counter" id="counter">0 / 90</div></div>
+      <div class="number-grid" id="numberGrid" aria-live="polite"></div>
+    </section>
+
+    <footer><span>Feito para celebrar cada número.</span><span>Use o locutor para uma experiência completa 🎉</span></footer>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
